@@ -24,7 +24,7 @@ def main():
         elif choice == "S":
             high = set_limit(low)
         elif choice == "H":
-            high_scores()
+            display_high_scores()
         else:
             print("Invalid choice")
         choice = input("(P)lay, (S)et limit, (H)igh scores, (Q)uit: ").upper()
@@ -73,7 +73,7 @@ def set_limit(low):
 def get_valid_number(prompt):
     """Get valid number given prompt"""
     is_valid = False
-    while is_valid == False:
+    while not is_valid:
         try:
             number = int(input(prompt))
             is_valid = True
