@@ -77,9 +77,9 @@ def get_valid_number(prompt):
         try:
             number = int(input(prompt))
             is_valid = True
+            return number
         except ValueError:
             print("Invalid number")
-    return number
 
 
 def determine_good_score(number_of_guesses, range_):
